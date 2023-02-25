@@ -1,0 +1,154 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+
+    
+}
+body{
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.main{
+
+    height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.clear{
+    clear: both;
+}
+.btn{
+    padding: 12px 48px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: #fff;
+    transition: opacity ease .2s;
+
+}
+.btn:hover{
+    opacity: 0.8;
+}
+.btn--success{
+
+    background-color: #71be34;
+}
+.btn--warn{
+
+    background-color: #ff623d;
+}
+.btn + .btn{
+    margin-left: 17px;
+}
+.btn--disable{
+    cursor: default !important;
+    opacity: 0.8;
+    
+}
+.btn--size--l{
+    padding: 20px 100px;
+}
+
+
+/* Toast messenger */
+
+.toast{
+    display: flex;
+    background-color: #fff; 
+    padding: 20px 0;
+    border-left: 4px solid ;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    min-width: 400px;
+    max-width: 450px;
+    animation: FadeIn ease 0.3s, FadeOut linear 1s 5s forwards  ;
+
+
+
+}
+
+
+@keyframes FadeIn{
+    from{
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+    to
+    {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+@keyframes FadeOut{
+    to{
+        opacity: 0;
+    }
+}
+
+
+.toast__body{
+    min-width: 300px;
+}
+.toast__icon{
+    font-size: 24px;
+}
+
+.toast__icon,
+.toast__close{
+    padding: 0 16px;
+}
+.toast__close{
+    font-size: 20px;
+    cursor: pointer;
+}
+.toast__close:hover{
+    opacity: 0.3;
+}
+
+.toast + .toast{
+    margin-top: 17px;
+}
+
+.toast--success{
+    border-left:4px solid #71be34;
+}
+.toast--infor{
+    border-left:4px solid #ffc021;
+}
+
+.toast--success .toast__icon {
+
+  color: #71be34;
+}
+.toast--infor .toast__icon {
+
+    color: #ffc021;
+}
+.toast--success .toast__title{
+   
+}
+.toast--success .toast__msg{
+    color: #fff;
+
+    color:rgba(0, 0, 0, 0.3)
+}
+.toast--infor .toast__msg{
+    color: #fff;
+
+    color:rgba(0, 0, 0, 0.3)
+}
+
+
+
+#toast{
+    position: fixed;
+    top:32px;
+    right: 32px;
+}
